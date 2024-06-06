@@ -1,6 +1,6 @@
-package com.jlunic.jlunic_market.application.controllers;
+package com.jlunic.jlunic_market.infraestructure.controllers;
 
-import com.jlunic.jlunic_market.domain.entities.Message;
+import com.jlunic.jlunic_market.domain.models.Message;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collections;

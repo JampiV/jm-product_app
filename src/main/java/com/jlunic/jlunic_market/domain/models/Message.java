@@ -1,4 +1,4 @@
-package com.jlunic.jlunic_market.domain.entities;
+package com.jlunic.jlunic_market.domain.models;
 
 import lombok.Getter;
 import lombok.Setter;

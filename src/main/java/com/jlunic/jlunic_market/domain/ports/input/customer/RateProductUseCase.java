@@ -1,2 +1,5 @@
-package com.jlunic.jlunic_market.domain.ports.input.customer;public class RateProductUseCase {
+package com.jlunic.jlunic_market.domain.ports.input.customer;
+
+public interface RateProductUseCase
+{
 }
