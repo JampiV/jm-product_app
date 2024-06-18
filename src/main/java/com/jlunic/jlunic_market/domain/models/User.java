@@ -1,15 +1,18 @@
 package com.jlunic.jlunic_market.domain.models;
 
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 @Setter
 @Getter
-public abstract class User
+@AllArgsConstructor
+//Pending User SuperBuilder
+//@SuperBuilder
+public class User
 {
 
-    private String username;
-    private String password;
-    private String email;
-    private String rol;
+    private final String username;
+    private final String password;
+    private final Role rol;
 
 }

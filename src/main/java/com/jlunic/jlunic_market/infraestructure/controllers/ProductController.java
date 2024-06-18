@@ -12,8 +12,8 @@ import java.util.List;
 @AllArgsConstructor
 @RestController
 @RequestMapping("/content")
-public class ProductController {
-    //TO DO TOO
+public class ProductController
+{
     private final ProductService productService;
 
     @PostMapping
