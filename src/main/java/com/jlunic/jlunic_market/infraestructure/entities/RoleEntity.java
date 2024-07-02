@@ -1,11 +1,14 @@
 package com.jlunic.jlunic_market.infraestructure.entities;
 
 import com.jlunic.jlunic_market.domain.models.Role;
+import com.jlunic.jlunic_market.domain.models.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.List;
 
 @Setter
 @Getter
@@ -20,6 +23,10 @@ public class RoleEntity
 
     @Column(nullable = false)
     private String name;
+
+    /*
+    @OneToMany(mappedBy = "role")
+    private List<User> users;*/
 
     public static RoleEntity fromDomainModel(Role role)
     {

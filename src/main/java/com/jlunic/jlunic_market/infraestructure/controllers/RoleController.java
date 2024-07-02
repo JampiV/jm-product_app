@@ -11,7 +11,7 @@ import java.util.List;
 
 @AllArgsConstructor
 @RestController
-@RequestMapping("/system")
+@RequestMapping("/system/role")
 public class RoleController
 {
     private final RoleService roleService;
