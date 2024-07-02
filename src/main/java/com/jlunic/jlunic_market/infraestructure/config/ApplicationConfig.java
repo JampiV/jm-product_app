@@ -9,6 +9,7 @@ import com.jlunic.jlunic_market.application.usecases.adminContent.RetrieveProduc
 import com.jlunic.jlunic_market.application.usecases.adminContent.UpdateProductUseCaseImpl;
 import com.jlunic.jlunic_market.application.usecases.adminSystem.ManageContUsersUseCaseImpl;
 import com.jlunic.jlunic_market.application.usecases.adminSystem.ManageRoleUseCaseImpl;
+import com.jlunic.jlunic_market.application.usecases.customer.SignUpUserUseCaseImpl;
 import com.jlunic.jlunic_market.domain.ports.output.ProductRepositoryPort;
 import com.jlunic.jlunic_market.domain.ports.output.RoleRepositoryPort;
 import com.jlunic.jlunic_market.domain.ports.output.UserRepositoryPort;
@@ -45,6 +46,7 @@ public class ApplicationConfig {
     public UserService userService(UserRepositoryPort userRepositoryPort, PasswordEncoder passwordEncoder)
     {
         return new UserService(
+                new SignUpUserUseCaseImpl(userRepositoryPort, passwordEncoder),
                 new ManageContUsersUseCaseImpl(userRepositoryPort, passwordEncoder)
         );
     }

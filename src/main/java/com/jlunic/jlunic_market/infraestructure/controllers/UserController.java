@@ -2,6 +2,7 @@ package com.jlunic.jlunic_market.infraestructure.controllers;
 
 import com.jlunic.jlunic_market.application.services.UserService;
 import com.jlunic.jlunic_market.domain.models.User;
+import com.jlunic.jlunic_market.domain.models.UserCustomer;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,5 +23,12 @@ public class UserController
     {
         User createdUser = userService.save(user);
         return new ResponseEntity<>(createdUser, HttpStatus.CREATED);
+    }
+
+    @PostMapping("/customer")
+    public ResponseEntity<UserCustomer> createUserCustomer(@RequestBody UserCustomer userCustomer)
+    {
+        UserCustomer createdCustomer = userService.signUpUser(userCustomer);
+        return new ResponseEntity<>(createdCustomer, HttpStatus.CREATED);
     }
 }
